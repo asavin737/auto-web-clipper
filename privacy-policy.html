@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy – Auto Web Clipper</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --text: #0f172a;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --bg: #f8fafc;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text: #f1f5f9;
+          --muted: #94a3b8;
+          --border: #334155;
+          --bg: #0f172a;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 2rem 1.25rem 3rem;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+        max-width: 42rem;
+        margin-inline: auto;
+      }
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0 0 0.5rem;
+      }
+      .effective {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin: 0 0 2rem;
+      }
+      h2 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin: 2rem 0 0.75rem;
+        padding-top: 0.25rem;
+        border-top: 1px solid var(--border);
+      }
+      h2:first-of-type {
+        border-top: none;
+        margin-top: 1.25rem;
+      }
+      p,
+      ul {
+        margin: 0 0 1rem;
+      }
+      ul {
+        padding-left: 1.25rem;
+      }
+      li {
+        margin-bottom: 0.35rem;
+      }
+      a {
+        color: inherit;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+      }
+      .lead {
+        margin-bottom: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Privacy Policy – Auto Web Clipper</h1>
+    <p class="effective">Effective date: April 8, 2026</p>
+
+    <p class="lead">
+      Auto Web Clipper is a local-first Chrome extension. We do not operate a backend service for user
+      notes.
+    </p>
+
+    <h2>What data the extension processes</h2>
+    <ul>
+      <li>User-selected website text (highlights)</li>
+      <li>Source page URL and title</li>
+      <li>Locally generated embeddings and note/category metadata</li>
+    </ul>
+
+    <h2>How data is used</h2>
+    <ul>
+      <li>Save highlights as notes</li>
+      <li>Organize notes into categories using on-device processing</li>
+    </ul>
+
+    <h2>Where data is stored</h2>
+    <p>Data is stored locally in the user’s browser (IndexedDB / extension storage).</p>
+
+    <h2>Data sharing and selling</h2>
+    <ul>
+      <li>We do not sell user data.</li>
+      <li>We do not use user data for advertising.</li>
+      <li>We do not share note content with third parties.</li>
+    </ul>
+
+    <h2>Network access</h2>
+    <p>
+      The extension may download machine-learning model assets (e.g., from Hugging Face/jsDelivr)
+      required for local categorization. User note content is not sent to external analytics or ad
+      services.
+    </p>
+
+    <h2>Security</h2>
+    <p>We use Chrome extension storage mechanisms and local processing where possible.</p>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li>You can delete notes/categories from the extension UI.</li>
+      <li>You can remove the extension at any time to stop all processing.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+      For privacy questions, contact:
+      <a href="mailto:vinogradov.ext.dev@gmail.com">vinogradov.ext.dev@gmail.com</a>
+    </p>
+  </body>
+</html>
