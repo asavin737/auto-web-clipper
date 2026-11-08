@@ -78,41 +78,94 @@
   </head>
   <body>
     <h1>Privacy Policy – Auto Web Clipper</h1>
-    <p class="effective">Effective date: April 8, 2026</p>
+    <p class="effective">Effective date: November 9, 2026</p>
 
     <p class="lead">
-      Auto Web Clipper is a local-first Chrome extension. We do not operate a backend service for user
-      notes.
+      Auto Web Clipper is a local-first Chrome extension. Your saved notes stay in your browser. We
+      do not sync your knowledge base to a notes cloud or require an account. Limited anonymous product
+      usage analytics and optional feedback are described below.
     </p>
 
-    <h2>What data the extension processes</h2>
+    <h2>What data the extension processes locally</h2>
     <ul>
       <li>User-selected website text (highlights)</li>
-      <li>Source page URL and title</li>
+      <li>
+        Source page URL and title for that clip only (saved when you explicitly save a highlight; the
+        extension does not collect browsing history)
+      </li>
       <li>Locally generated embeddings and note/category metadata</li>
+      <li>Study Mode session state (note IDs and assessment status only)</li>
     </ul>
 
-    <h2>How data is used</h2>
+    <h2>How local data is used</h2>
     <ul>
       <li>Save highlights as notes</li>
       <li>Organize notes into categories using on-device processing</li>
+      <li>Power Study Mode active-recall review</li>
     </ul>
 
-    <h2>Where data is stored</h2>
-    <p>Data is stored locally in the user’s browser (IndexedDB / extension storage).</p>
+    <h2>Where note data is stored</h2>
+    <p>
+      Notes, categories, settings, and study sessions are stored locally in the user’s browser
+      (IndexedDB / extension storage).
+    </p>
+
+    <h2>Anonymous usage analytics (always-on)</h2>
+    <p>
+      The extension sends anonymous product usage telemetry to PostHog Cloud (EU region) so we can
+      understand how features are used (for example Study Mode actions, popup opens, note-save
+      counts, and feedback-prompt actions). This is extension usage activity, not website content.
+    </p>
+    <ul>
+      <li>
+        An anonymous installation identifier is created locally and reused for analytics (not an
+        email, name, or Google account).
+      </li>
+      <li>
+        Events may include non-content metadata such as extension version and app surface
+        (<code>popup</code> or <code>tab</code>).
+      </li>
+      <li>
+        There is <strong>no</strong> in-extension toggle to turn analytics off. Uninstalling the
+        extension stops further client-side event sending.
+      </li>
+    </ul>
+    <p>Analytics does <strong>not</strong> include:</p>
+    <ul>
+      <li>Note text / highlight content</li>
+      <li>Page titles or source URLs</li>
+      <li>Browsing history</li>
+      <li>Category names or IDs</li>
+      <li>Note IDs or study session queues</li>
+      <li>Free-text feedback comments</li>
+    </ul>
+
+    <h2>Optional feedback survey</h2>
+    <p>
+      After a small number of successful saves, the extension may show a short survey. If you submit
+      it, the selected use case and optional comment are sent to an operator-hosted feedback backend
+      (stored in that service’s database; the operator may receive a Telegram notification). Survey
+      free-text is <strong>not</strong> sent to PostHog.
+    </p>
 
     <h2>Data sharing and selling</h2>
     <ul>
       <li>We do not sell user data.</li>
       <li>We do not use user data for advertising.</li>
       <li>We do not share note content with third parties.</li>
+      <li>
+        Anonymous usage events are processed by PostHog Cloud (EU). Feedback survey answers are
+        processed on the operator feedback service.
+      </li>
     </ul>
 
     <h2>Network access</h2>
     <p>
-      The extension may download machine-learning model assets (e.g., from Hugging Face/jsDelivr)
-      required for local categorization. User note content is not sent to external analytics or ad
-      services.
+      The extension may download on-device embedding model assets (for example from Hugging Face /
+      jsDelivr) so categorization can run locally in your browser. Note text is not uploaded to those
+      hosts for processing or analytics. The extension may also contact PostHog (usage analytics) and
+      the feedback API (only when you submit the survey). User note content is not uploaded for
+      analytics or advertising.
     </p>
 
     <h2>Security</h2>
@@ -121,7 +174,11 @@
     <h2>Your choices</h2>
     <ul>
       <li>You can delete notes/categories from the extension UI.</li>
-      <li>You can remove the extension at any time to stop all processing.</li>
+      <li>You can skip or dismiss the optional feedback survey.</li>
+      <li>
+        You can remove the extension at any time to stop local processing and further client-side
+        analytics sends.
+      </li>
     </ul>
 
     <h2>Contact</h2>
